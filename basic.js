@@ -36,6 +36,12 @@ typeof "Hello"
 // 比較演算子
 1 > 2
 "Apple" == "Orange"
+"Google" != "Yahoo"
+
+// 厳格な比較
+"Apple" === "Orange"
+"Google" !== "Yahoo"
+1 === "1"  // 1 == "1"はtrue
 
 // 論理演算子
 1 + 1 == 2 && 3 * 3 > 5
