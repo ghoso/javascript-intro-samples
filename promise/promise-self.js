@@ -9,4 +9,4 @@ function wait(time){
 }
 
 console.log("wait() called...");
-wait(5000).then(() => console.log("Done !"));
+wait(-100).then(() => console.log("Done !"), () => console.error("Failed"));

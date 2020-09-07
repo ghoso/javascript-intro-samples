@@ -1,6 +1,6 @@
 // プロトタイプ
 let p_obj = {};
-proto = p_obj.get_prototypeOf();
+let proto = Object.getPrototypeOf(p_obj);
 proto.a = 100;
 console.log(p_obj.a);
 
@@ -148,7 +148,7 @@ class Range {
         this.from = from;
         this.to = to;
     }
-    t[Symbol.iterator] () {
+    [Symbol.iterator] () {
         let next = Math.ceil(this.from);
         let last = this.to;
         return {
@@ -168,21 +168,6 @@ const seq = function*(from, to) {
     }
 };
 [...seq(1,10)]
-
-// ジェネレータ on Javascriptオブジェクト
-let o = {
-    x: 1,
-    y: 2,
-    z: 3,
-    *f() {
-        for (let key of Object.keys(this)) {
-            yield key;
-        }
-    }
-}
-for (let k in o){
-    console.log(k);
-}
 
 // 非同期プログラミング
 // コールバック
