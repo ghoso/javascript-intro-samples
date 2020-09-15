@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- npm install -g http-server -->
+<html>
+    <head>
+        <title>Javascript入門</title>
+        <style>
+            div {
+                font-family: "メイリオ","Meiryo";
+                padding: 10px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript入門</h1>
+        <div id="main">Hello Javascript !</div>
+        <span id="message"></span>
+        <div id="btn_place"><button onclick = "showMessage()">メッセージ表示</button></div>
+        <script>
+            function  showMessage() {
+                let msg = "Welcome JS World !";
+                // CSSセレクタ
+                let msg_area = document.querySelector("#message");
+                msg_area.innerText= msg;
+            }
+        </script>
+    </body>
+</html>

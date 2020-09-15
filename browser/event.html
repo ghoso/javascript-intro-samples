@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>イベント登録</title>
+    </head>
+    <body onload="registBtnHandler()">
+        <h1>イベント登録</h1>
+        <div id="content">
+            <div id="message1"></div>
+            <div id="message2"></div>
+        </div>
+        <div id="btn_place"><button id="msg_button" onclick = "showMessage('div#message1','Hello Javascript !')">メッセージ表示</button></div>
+        <script>
+            function showMessage(msg_div, msg){
+                let d = document.querySelector(msg_div);
+                d.innerHTML = msg;
+            }
+
+            function  registBtnHandler() {
+                let btn = document.querySelector("button#msg_button");
+                btn.addEventListener('click', function(){
+                    let msg_div = "div#message2";
+                    let msg = "Hello Python";
+                    let d = document.querySelector(msg_div);
+                    d.innerHTML = msg;
+                });
+            }
+        </script>
+    </body>
+</html>

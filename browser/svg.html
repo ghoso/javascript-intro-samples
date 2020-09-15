@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVGデモ</title>
+        <style>
+            #container {
+                margin: 10px;
+            }
+            #canvas {
+                stroke: black;
+                stroke-linecap: round;
+                fill: #ffe;
+            }
+            #canvac .face {
+                stroke-width: 3;
+            }
+            #canvas .message {
+                font-family: sans-serif;
+                font-size: 2;
+                font-weight: normal;
+                text-anchor: left;
+                stroke: none;
+                fill: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>SVGデモ</h1>
+            <svg id="canvas" viewBox="0 0 100 100" width="500" height="500">
+                <circle class="face" cx="50" cy="50" r="30"/>
+                <rect x="5" y="70" width="50" height="26" rx="10" ry="10" fill="green"></rect>
+                <path d="M5,5 L15,15 C20,20 25,50 50,25 Z" fill="red"></path>
+                <text class="message" x="25" y="55">Hello !</text> 
+            </svg> 
+        </div>
+    </body>
+</html>

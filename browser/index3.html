@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript入門</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script type="module">
+            import {showMessage} from "./js/module.mjs";
+            document.querySelector('#show_msg_btn').addEventListener('click', showMessage)
+        </script>
+    </head>
+    <body>
+        <h1>Javascript入門</h1>
+        <div id="main">Hello Javascript !</div>
+        <span id="message"></span>
+        <div id="btn_place"><button id="show_msg_btn">メッセージ表示</button></div>
+    </body>
+</html>

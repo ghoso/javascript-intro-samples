@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvasデモ</title>
+        <style>
+            #container {
+                margin: 10px;
+            }
+        </style>
+        <!-- Canvas APIリファレンス http://htmq.com/canvas/ -->
+    </head>
+    <body>
+        <div id="container">
+        <h1>Canvasデモ</h1>
+                <canvas id="square" width="300" height="300"></canvas>
+                <canvas id="circle" width="300" height="300"></canvas>
+        </div>
+        <script>
+            let canvas = document.querySelector("#square");
+            let context = canvas.getContext("2d");
+            context.fillStyle="#f00";
+            context.fillRect(0, 0, 100, 100);
+
+            cnanvas = document.querySelector("#circle");
+            context = canvas.getContext("2d");
+            context.beginPath();
+            context.arc(160, 50, 50, 0, 2*Math.PI, true);
+            context.fillStyle = "#00f";
+            context.fill();
+        </script>
+    </body>
+</html>
