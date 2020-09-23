@@ -3,9 +3,9 @@
 コース URL https://it-akademeia.jp/2020/08/26/javascript-intro/
 
 - sample.js  
-  Javascript 実行例用コード
+  Javascript実行例用コード
 - basic.js  
-  Javascript の基本
+  Javascriptの基本
 - advance.js  
   高度な機能
 - function_def.js  

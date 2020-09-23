@@ -20,11 +20,13 @@ let offset_x = c.getBoundingClientRect().left;
 let offset_y = c.getBoundingClientRect().top;
 debug_print("canvas origin = (" + offset_x +"," + offset_y + ")");
 
+// デバッグ出力
 function debug_print(msg){
   if (DEBUG) {
     console.log("DEBUG: " + msg);
   }
 }
+
 // 直線描画
 function drawLine(ctx, start_coord, end_coord){
   ctx.beginPath();
@@ -99,14 +101,17 @@ function onUp(e) {
   dragging = false;
 }
 
+// ドラッグ中、キャンバスから出た時の処理
 function onOut() {
-  debug_print("mouseout");
-  // ドラッグキャンセル
-  dragging = false;
-  start_x = 0;
-  start_y = 0;
-  context.clearRect(0, 0, canvasW, canvasH);
-  redrawLines(context, draw_data);
+  if (dragging){
+    debug_print("mouseout");
+    // ドラッグキャンセル
+    dragging = false;
+    start_x = 0;
+    start_y = 0;
+    context.clearRect(0, 0, canvasW, canvasH);
+    redrawLines(context, draw_data);
+  }
 }
 
 canvas.addEventListener('mousedown', onDown, false);
