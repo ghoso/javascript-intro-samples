@@ -17,4 +17,4 @@
 - browser/  
   ブラウザでのJavascript
 - project/  
-  お絵かきアプリ
+  お絵かきアプリサンプルコード

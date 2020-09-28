@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>お絵かきアプリ v0.2</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Javascript入門 サンプルプロジェクトアプリ" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/app.js" type="module"></script>
+  </head>
+  <body>
+    <h1>お絵かきアプリ v0.2</h1> 
+    <div id="container">
+      <canvas id="canvas", width="640" height="480"></canvas>
+      <div id="shape_pallet">
+        <div class="shape" id="line"><img src="./images/line.png"></div>
+        <div class="shape" id="square"><img src="./images/square.png"></div>
+        <div class="shape" id="circle"><img src="./images/circle.png"></div>
+      </div>
+    </div>
+    <div id="button_container">
+      <button id="clear">Clear</button>
+    </div>
+  </body>
+</html>

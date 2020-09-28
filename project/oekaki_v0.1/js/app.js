@@ -46,15 +46,15 @@ function redrawLines(ctx, lines){
 }
 
 // 描画データとキャンバスクリア
-function clearCanvas(){
+function clearCanvas(e){
   draw_data = [];
   context.clearRect(0, 0, canvasW, canvasH);
+  console.log('Clear canvas')
 }
 
 // マウスダウン
 function onDown(e) {
   debug_print("down");
-
   // クリック位置の座標を取得
   start_x = e.clientX - offset_x;
   start_y = e.clientY - offset_y;
@@ -102,7 +102,7 @@ function onUp(e) {
 }
 
 // ドラッグ中、キャンバスから出た時の処理
-function onOut() {
+function onOut(e) {
   if (dragging){
     debug_print("mouseout");
     // ドラッグキャンセル
@@ -114,7 +114,11 @@ function onOut() {
   }
 }
 
-canvas.addEventListener('mousedown', onDown, false);
-canvas.addEventListener('mouseup', onUp, false);
-canvas.addEventListener('mousemove', onMove, false);
-canvas.addEventListener('mouseout', onOut, false);
+// イベントハンドラー登録
+c.addEventListener('mousedown', onDown, false);
+c.addEventListener('mouseup', onUp, false);
+c.addEventListener('mousemove', onMove, false);
+c.addEventListener('mouseout', onOut, false);
+
+let clear = document.querySelector("#clear");
+clear.addEventListener('click', clearCanvas, false);

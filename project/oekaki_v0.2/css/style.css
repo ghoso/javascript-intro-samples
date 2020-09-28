@@ -1,0 +1,33 @@
+h1 {
+  margin-left: 30px;
+}
+#container {
+  width: 640px;
+  height: 480px;
+  border: solid 1px black;
+  margin: auto;
+  display: flex;
+}
+.shape_pallet {
+  display: flex;
+  flex-direction: column;
+}
+.shape {
+  width: 80px;
+  height: 80px;
+  border: solid 1px black;
+  line-height: 80px;
+  text-align: center;
+}
+#canvas {
+  background: "#ccc";
+}
+#button_container {
+  margin: 20px auto;
+  text-align: center;
+}
+#clear {
+  width: 130px;
+  height: 40px;
+  font-size: 1.2em;
+}
