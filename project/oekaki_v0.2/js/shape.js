@@ -50,7 +50,7 @@ export class Circle extends Shape {
   constructor(ctx, start, end){
     super(ctx, start, end);
     this.center = {x: (this.start.x + this.end.x)/2, y: (this.start.y + this.end.y)/2};
-    this.radius = Math.sqrt(Math.pow(this.end.x - this.start.x, 2) + Math.pow(this.end.y - this.start.y, 2));
+    this.radius = Math.sqrt(Math.pow(this.end.x - this.start.x, 2) + Math.pow(this.end.y - this.start.y, 2))/2;
     debug_print("center.x = " + this.center.x +",center.y = " + this.center.y);   
     debug_print("radius = " + this.radius);
   }
